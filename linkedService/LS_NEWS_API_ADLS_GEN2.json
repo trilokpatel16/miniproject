@@ -1,0 +1,12 @@
+{
+	"name": "LS_NEWS_API_ADLS_GEN2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://zneectrilokadls.dfs.core.windows.net",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlpORS1FQy1UUklMT0stQURGX2M5ZTk1M2IwLWRlZmItNGI3MS04NzNlLWM5NTJkZjc3MzFiYSINCn0="
+		}
+	}
+}
