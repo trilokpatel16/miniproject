@@ -5,11 +5,21 @@
 			"referenceName": "LS_NEWS_API_ADLS_GEN2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"country": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('News_API/',dataset().country,'Staging')",
+					"type": "Expression"
+				},
+				"fileSystem": "mini-project"
 			}
 		},
 		"schema": {}
