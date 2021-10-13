@@ -1,0 +1,24 @@
+{
+	"name": "PL_MINI_PROJECT_NEWS_API_STAGING",
+	"properties": {
+		"activities": [
+			{
+				"name": "AT_COPY_NEWS_API",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"enableStaging": false
+				}
+			}
+		],
+		"annotations": []
+	}
+}
