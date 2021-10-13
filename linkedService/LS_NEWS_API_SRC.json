@@ -1,0 +1,12 @@
+{
+	"name": "LS_NEWS_API_SRC",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://newsapi.org/v2/top-headlines?",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
