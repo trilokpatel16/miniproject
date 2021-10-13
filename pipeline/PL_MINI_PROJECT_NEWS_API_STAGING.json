@@ -63,7 +63,8 @@
 							"country": {
 								"value": "@pipeline().parameters.country",
 								"type": "Expression"
-							}
+							},
+							"Layer": "Staging"
 						}
 					}
 				]
