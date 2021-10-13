@@ -58,7 +58,13 @@
 				"outputs": [
 					{
 						"referenceName": "DS_NEWS_API_ADLS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"country": {
+								"value": "@pipeline().parameters.country",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
