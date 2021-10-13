@@ -5,8 +5,28 @@
 			"referenceName": "LS_NEWS_API_SOURCE",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"from": {
+				"type": "string"
+			},
+			"to": {
+				"type": "string"
+			},
+			"country": {
+				"type": "string"
+			},
+			"apiKey": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@concat(dataset().from,'&',dataset().to,'&',dataset().country,'&',dataset().apiKey)",
+				"type": "Expression"
+			}
+		},
 		"schema": []
 	}
 }

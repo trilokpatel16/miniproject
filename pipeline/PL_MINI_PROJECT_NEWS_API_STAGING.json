@@ -16,25 +16,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "RestSource",
-						"httpRequestTimeout": "00:01:40",
-						"requestInterval": "00.00:00:00.010",
-						"requestMethod": "GET",
-						"additionalHeaders": {
-							"from": {
-								"value": "@formatDateTime(getPastTime(1,'Day'))",
-								"type": "Expression"
-							},
-							"to": {
-								"value": "@formatDateTime(utcnow())",
-								"type": "Expression"
-							},
-							"country": {
-								"value": "@pipeline().parameters.country",
-								"type": "Expression"
-							},
-							"sortBy": "relevancy",
-							"apiKey": "9391dcc800e545cd8c375b3c9448ef67"
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
 						}
 					},
 					"sink": {
@@ -50,8 +38,23 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_NEWS_API_SOURCE",
-						"type": "DatasetReference"
+						"referenceName": "DS_NEWS_API_SRC",
+						"type": "DatasetReference",
+						"parameters": {
+							"from": {
+								"value": "@formatDateTime(getPastTime(1,'Day'))",
+								"type": "Expression"
+							},
+							"to": {
+								"value": "@formatDateTime(utcnow())",
+								"type": "Expression"
+							},
+							"country": {
+								"value": "@pipeline().parameters.country",
+								"type": "Expression"
+							},
+							"apiKey": "9391dcc800e545cd8c375b3c9448ef67"
+						}
 					}
 				],
 				"outputs": [
