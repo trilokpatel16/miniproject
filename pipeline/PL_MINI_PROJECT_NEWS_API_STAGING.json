@@ -21,7 +21,6 @@
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"additionalHeaders": {
-							"q": "flights",
 							"from": {
 								"value": "@formatDateTime(getPastTime(1,'Day'))",
 								"type": "Expression"
