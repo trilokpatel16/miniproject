@@ -1,0 +1,12 @@
+{
+	"name": "LS_NEWS_API_SOURCE",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://newsapi.org/v2",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
