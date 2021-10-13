@@ -1,12 +1,19 @@
 {
 	"name": "LS_NEWS_API_SOURCE",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
 			"url": "https://newsapi.org/v2/top-headlines?",
 			"enableServerCertificateValidation": true,
-			"authenticationType": "Anonymous"
+			"authenticationType": "Anonymous",
+			"authHeaders": {
+				"apiKey": {
+					"type": "SecureString",
+					"value": "**********"
+				}
+			}
 		}
 	}
 }
