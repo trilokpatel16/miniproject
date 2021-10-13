@@ -1,0 +1,12 @@
+{
+	"name": "DS_NEWS_API_SOURCE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_NEWS_API_SOURCE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
