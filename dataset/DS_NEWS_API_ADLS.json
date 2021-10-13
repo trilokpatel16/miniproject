@@ -1,0 +1,17 @@
+{
+	"name": "DS_NEWS_API_ADLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_NEWS_API_ADLS_GEN2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			}
+		},
+		"schema": {}
+	}
+}

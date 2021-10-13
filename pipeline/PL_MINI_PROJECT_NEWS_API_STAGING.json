@@ -15,10 +15,59 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"additionalHeaders": {
+							"q": "flights",
+							"from": {
+								"value": "@formatDateTime(getPastTime(1,'Day'))",
+								"type": "Expression"
+							},
+							"to": {
+								"value": "@formatDateTime(utcnow())",
+								"type": "Expression"
+							},
+							"sortBy": "relevancy",
+							"apiKey": "9391dcc800e545cd8c375b3c9448ef67",
+							"country": {
+								"value": "@pipeline().parameters.country",
+								"type": "Expression"
+							}
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_NEWS_API_SOURCE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_NEWS_API_ADLS",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
+		"parameters": {
+			"country": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
