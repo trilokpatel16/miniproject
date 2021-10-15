@@ -39,7 +39,10 @@
 						"parameters": {
 							"from": "2021-10-14",
 							"to": "2021-10-15",
-							"country": "pt",
+							"country": {
+								"value": "@pipeline().parameters.country",
+								"type": "Expression"
+							},
 							"apiKey": "9391dcc800e545cd8c375b3c9448ef67"
 						}
 					}
