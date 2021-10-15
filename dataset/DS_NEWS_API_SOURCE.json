@@ -23,7 +23,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "@concat('from=',dataset().from,'&to=',dataset().to,'&country=',dataset().country,'&apiKey=',dataset().apiKey)",
+				"value": "@concat('/v2/top-headlines?from=',dataset().from,'&to=',dataset().to,'&country=',dataset().country,'&apiKey=',dataset().apiKey)",
 				"type": "Expression"
 			}
 		},

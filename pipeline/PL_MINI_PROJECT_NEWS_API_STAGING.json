@@ -16,14 +16,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "JsonSource",
-						"storeSettings": {
-							"type": "HttpReadSettings",
-							"requestMethod": "GET"
-						},
-						"formatSettings": {
-							"type": "JsonReadSettings"
-						}
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET"
 					},
 					"sink": {
 						"type": "JsonSink",
@@ -38,21 +34,12 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_NEWS_API_SRC",
+						"referenceName": "DS_NEWS_API_SOURCE",
 						"type": "DatasetReference",
 						"parameters": {
-							"from": {
-								"value": "@formatDateTime(getPastTime(1,'Day'))",
-								"type": "Expression"
-							},
-							"to": {
-								"value": "@formatDateTime(utcnow())",
-								"type": "Expression"
-							},
-							"country": {
-								"value": "@pipeline().parameters.country",
-								"type": "Expression"
-							},
+							"from": "2021-10-14",
+							"to": "2021-10-15",
+							"country": "pt",
 							"apiKey": "9391dcc800e545cd8c375b3c9448ef67"
 						}
 					}
