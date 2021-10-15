@@ -19,7 +19,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "@concat('News_API/',dataset().country,dataset().Layer,'/YYYY=', formatDateTime(utcnow(), 'yyyy'), '/MM=', formatDateTime(utcnow(), 'MM'), '/DD=', formatDateTime(utcnow(), 'dd'))",
+					"value": "@concat('News_API/',dataset().country,'/',dataset().Layer,'/YYYY=', formatDateTime(utcnow(), 'yyyy'), '/MM=', formatDateTime(utcnow(), 'MM'), '/DD=', formatDateTime(utcnow(), 'dd'))",
 					"type": "Expression"
 				},
 				"fileSystem": "mini-project"
