@@ -23,7 +23,7 @@
 		"type": "RestResource",
 		"typeProperties": {
 			"relativeUrl": {
-				"value": "@concat(dataset().from,'&',dataset().to,'&',dataset().country,'&',dataset().apiKey)",
+				"value": "@concat('from=',dataset().from,'&to=',dataset().to,'&country=',dataset().country,'&apiKey=',dataset().apiKey)",
 				"type": "Expression"
 			}
 		},
